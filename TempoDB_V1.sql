@@ -156,5 +156,5 @@ ALTER TABLE "User" ADD CONSTRAINT User_to_Weather
     INITIALLY IMMEDIATE
 ;
 
---Testing GitHub Desktop App
+--Testing GitHub Desktop App V2
 -- End of file.
