@@ -95,65 +95,66 @@ CREATE TABLE Daily_Forecast (
 -- Reference: Daily_Forecast_Weather (table: Daily_Forecast)
 ALTER TABLE Daily_Forecast ADD CONSTRAINT Daily_Forecast_Weather
     FOREIGN KEY (zip_code)
-    REFERENCES Weather (zip_code)  
-    NOT DEFERRABLE 
+    REFERENCES Weather (zip_code)
+    NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
 
 -- Reference: Listening_History_to_User (table: Listening_History)
 ALTER TABLE Listening_History ADD CONSTRAINT Listening_History_to_User
     FOREIGN KEY (user_id)
-    REFERENCES "User" (user_id)  
-    NOT DEFERRABLE 
+    REFERENCES "User" (user_id)
+    NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
 
 -- Reference: Playlist_Tracks_Tracks (table: Playlist_Tracks)
 ALTER TABLE Playlist_Tracks ADD CONSTRAINT Playlist_Tracks_Tracks
     FOREIGN KEY (track_id)
-    REFERENCES Tracks (track_id)  
-    NOT DEFERRABLE 
+    REFERENCES Tracks (track_id)
+    NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
 
 -- Reference: Playlist_to_Tracks_Playlists (table: Playlist_Tracks)
 ALTER TABLE Playlist_Tracks ADD CONSTRAINT Playlist_to_Tracks_Playlists
     FOREIGN KEY (playlist_id)
-    REFERENCES Playlists (playlist_id)  
-    NOT DEFERRABLE 
+    REFERENCES Playlists (playlist_id)
+    NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
 
 -- Reference: Playlists_to_User (table: Playlists)
 ALTER TABLE Playlists ADD CONSTRAINT Playlists_to_User
     FOREIGN KEY (user_id)
-    REFERENCES "User" (user_id)  
-    NOT DEFERRABLE 
+    REFERENCES "User" (user_id)
+    NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
 
 -- Reference: Recently_Listened_Tracks (table: Recently_Listened)
 ALTER TABLE Recently_Listened ADD CONSTRAINT Recently_Listened_Tracks
     FOREIGN KEY (track_id)
-    REFERENCES Tracks (track_id)  
-    NOT DEFERRABLE 
+    REFERENCES Tracks (track_id)
+    NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
 
 -- Reference: Recently_Listened_to_Listening_History (table: Recently_Listened)
 ALTER TABLE Recently_Listened ADD CONSTRAINT Recently_Listened_to_Listening_History
     FOREIGN KEY (listening_history_id)
-    REFERENCES Listening_History (listening_history_id)  
-    NOT DEFERRABLE 
+    REFERENCES Listening_History (listening_history_id)
+    NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
 
 -- Reference: User_to_Weather (table: User)
 ALTER TABLE "User" ADD CONSTRAINT User_to_Weather
     FOREIGN KEY (zip_code)
-    REFERENCES Weather (zip_code)  
-    NOT DEFERRABLE 
+    REFERENCES Weather (zip_code)
+    NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
 
+--Testing GitHub Desktop App
 -- End of file.
