@@ -1,5 +1,5 @@
 -- Table: User
-CREATE TABLE "User" (
+/* CREATE TABLE "User" (
     user_id bigint  NOT NULL,
     email varchar(100)  NOT NULL,
     password varchar(50)  NOT NULL,
@@ -154,7 +154,6 @@ ALTER TABLE "User" ADD CONSTRAINT User_to_Weather
     REFERENCES Weather (zip_code)
     NOT DEFERRABLE
     INITIALLY IMMEDIATE
-;
+; */
 
---Testing GitHub Desktop App V2
 -- End of file.
