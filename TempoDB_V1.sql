@@ -6,7 +6,7 @@
     spotify_id varchar(100)  NOT NULL,
     date_created date  NOT NULL,
     date_updated timestamp  NOT NULL,
-    zip_code varchar(5)  NOT NULL,
+    city varchar(50)  NOT NULL,
     CONSTRAINT User_pk PRIMARY KEY (user_id)
 );
 
