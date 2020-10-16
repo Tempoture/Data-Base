@@ -68,9 +68,9 @@ CREATE TABLE Tracks (
 
 -- Table: Weather
 CREATE TABLE Weather (
-    zip_code varchar(5)  NOT NULL,
+    city varchar(5)  NOT NULL,
     updated_at timestamp  NOT NULL,
-    CONSTRAINT Weather_pk PRIMARY KEY (zip_code)
+    CONSTRAINT Weather_pk PRIMARY KEY (city)
 );
 
 -- Table: Daily_Forecast
@@ -88,14 +88,14 @@ CREATE TABLE Daily_Forecast (
     snow_volume decimal  NOT NULL,
     precipitation_probability decimal  NOT NULL,
     updated_at timestamp  NOT NULL,
-    zip_code varchar(5)  NOT NULL,
+    city varchar(5)  NOT NULL,
     CONSTRAINT Daily_Forecast_pk PRIMARY KEY (daily_forecast_id)
 );
 -- foreign keys
 -- Reference: Daily_Forecast_Weather (table: Daily_Forecast)
 ALTER TABLE Daily_Forecast ADD CONSTRAINT Daily_Forecast_Weather
-    FOREIGN KEY (zip_code)
-    REFERENCES Weather (zip_code)
+    FOREIGN KEY (city)
+    REFERENCES Weather (city)
     NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ;
@@ -150,8 +150,8 @@ ALTER TABLE Recently_Listened ADD CONSTRAINT Recently_Listened_to_Listening_Hist
 
 -- Reference: User_to_Weather (table: User)
 ALTER TABLE "User" ADD CONSTRAINT User_to_Weather
-    FOREIGN KEY (zip_code)
-    REFERENCES Weather (zip_code)
+    FOREIGN KEY (city)
+    REFERENCES Weather (city)
     NOT DEFERRABLE
     INITIALLY IMMEDIATE
 ; */
