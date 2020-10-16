@@ -13,7 +13,7 @@
 -- Table: Listening_History
 CREATE TABLE Listening_History (
     listening_history_id bigint  NOT NULL,
-    last_updated timestamp  NOT NULL,
+    updated_at timestamp  NOT NULL,
     user_id bigint  NOT NULL,
     CONSTRAINT Listening_History_pk PRIMARY KEY (listening_history_id)
 );
@@ -30,7 +30,7 @@ CREATE TABLE Playlist_Tracks (
 CREATE TABLE Playlists (
     playlist_id bigint  NOT NULL,
     playlist_name varchar(100)  NOT NULL,
-    last_updated timestamp  NOT NULL,
+    updated_at timestamp  NOT NULL,
     user_id bigint  NOT NULL,
     CONSTRAINT Playlists_pk PRIMARY KEY (playlist_id)
 );
@@ -69,7 +69,7 @@ CREATE TABLE Tracks (
 -- Table: Weather
 CREATE TABLE Weather (
     zip_code varchar(5)  NOT NULL,
-    last_updated timestamp  NOT NULL,
+    updated_at timestamp  NOT NULL,
     CONSTRAINT Weather_pk PRIMARY KEY (zip_code)
 );
 
@@ -87,7 +87,7 @@ CREATE TABLE Daily_Forecast (
     precipitation_volume decimal  NOT NULL,
     snow_volume decimal  NOT NULL,
     precipitation_probability decimal  NOT NULL,
-    last_updated timestamp  NOT NULL,
+    updated_at timestamp  NOT NULL,
     zip_code varchar(5)  NOT NULL,
     CONSTRAINT Daily_Forecast_pk PRIMARY KEY (daily_forecast_id)
 );
