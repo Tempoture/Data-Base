@@ -14,17 +14,17 @@ app = Flask(__name__)
 def hello():
     return 'Hello World!'
 
-#@app.route('/Users')
-#def contacts():
-#        select_query = 'SELECT * FROM public."Users"'
-#        cur.execute(select_query )
-#        rows = cur.fetchall()
-#        response = ''
-#        my_list = []
-#        for row in rows:
-#            my_list.append(row[1])
-#
-#        return render_template('template.html',  results=my_list)
+@app.route('/Users')
+def contacts():
+        select_query = 'SELECT * FROM public."Users"'
+        cur.execute(select_query )
+        rows = cur.fetchall()
+
+        my_list = []
+        for row in rows:
+            my_list.append(row[1])
+
+        return render_template('template.html',  results=my_list)
 
 if __name__ == '__main__':
     app.run()
