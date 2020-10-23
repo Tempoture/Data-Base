@@ -3,13 +3,10 @@ import psycopg2
 import urllib.parse as urlparse
 import os
 
-#connection = psycopg2.connect(  user = DB_USER,
-#                                password = DB_PASS,
-#                                host = DB_HOST,
-#                                port = DB_PORT,
-#                                database = DB_NAME )
-#
-#cur = connection.cursor()
+url = urlparse.urlparse(os.environ['DATABASE_URL'])
+db = "dbname=%s user=%s password=%s host=%s " % (url.path[1:], url.username, url.password, url.hostname)
+
+cur = connection.cursor()
 app = Flask(__name__)
 
 @app.route('/')
