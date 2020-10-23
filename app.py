@@ -1,13 +1,11 @@
-from __future__ import print_function
 from flask import Flask, render_template
-from os.path import exists
-from os import makedirs
-from dotenv import load_dotenv
-from datetime import datetime
-from psycopg2 import connect
-import psycopg2
-import json
-import os
+#from os.path import exists
+#from os import makedirs
+#from datetime import datetime
+#from psycopg2 import connect
+#import psycopg2
+#import json
+#import os
 
 #connection = psycopg2.connect(  user = DB_USER,
 #                                password = DB_PASS,
