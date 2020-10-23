@@ -6,6 +6,7 @@ import os
 url = urlparse.urlparse(os.environ['DATABASE_URL'])
 db = "dbname=%s user=%s password=%s host=%s " % (url.path[1:], url.username, url.password, url.hostname)
 
+connection = psycopg2.connect(db)
 cur = connection.cursor()
 app = Flask(__name__)
 
