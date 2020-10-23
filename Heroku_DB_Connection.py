@@ -26,7 +26,7 @@ try:
     # Print PostgreSQL version
     cursor.execute("SELECT version();")
     record = cursor.fetchone()
-    print("\nPostgreSQL Version: " , record , "\n")
+    print("\nPostgreSQL Version: " ,record , "\n")
 
     select_query = """INSERT INTO public."User"(user_id, email, password, spotify_id, date_created, date_updated, zip_code)
                    VALUES (1, 'Jim@gmail.com', 'Jimspassword', 'spot123', '2001-01-01' , '2012-04-09 08:14:26', '07035' );"""
@@ -42,3 +42,4 @@ finally:
             cursor.close()
             connection.close()
             print("PostgreSQL connection is closed")
+#testing git desktop
