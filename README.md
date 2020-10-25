@@ -34,7 +34,7 @@
 ## About The Database
 <br />
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/750506956539822120/769976987912765480/Database_Schema.PNG" alt="Logo" width="500" height="300">
+  <img src="https://cdn.discordapp.com/attachments/750506956539822120/769976987912765480/Database_Schema.PNG" alt="Logo" width="800" height="400">
 </p>
   <!-- fill this in -->
   
