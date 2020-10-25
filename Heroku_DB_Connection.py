@@ -29,7 +29,8 @@ try:
     print("\nPostgreSQL Version: " ,record , "\n")
 
     select_query = """INSERT INTO public."User"(user_id, email, password, spotify_id, date_created, date_updated, zip_code)
-                   VALUES (1, 'Jim@gmail.com', 'Jimspassword', 'spot123', '2001-01-01' , '2012-04-09 08:14:26', '07035' );"""
+                   VALUES (1, 'Sheldon@gmail.com', 'Jimspassword', 'spot123', '2001-01-01' , '2012-04-09 08:14:26', '07035' );"""
+                   
 
     cursor.execute(select_query)
     
