@@ -60,8 +60,8 @@ Above is a physical representation of the database that is used for the Tempotur
   * [Python3](https://www.python.org/download/releases/3.0/) - The programming language of choice for the project. 
   
 <!-- Installation -->
-## Installation Guide (using Ubuntu)
-Before installing the following softwares, have the latest version of Python installed. 
+## Installation Guide
+Before installing the following softwares, have the latest version of Python installed. Also note that these install commands are specific for the Ubuntu bash terminal. 
   ### Flask
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt install python3-pip` - Install package management system.
