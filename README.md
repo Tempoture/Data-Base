@@ -1,4 +1,4 @@
-[![MIT License][license-shield]][license-url]
+<!--[![GPL License][license-shield]][license-url] -->
 
 # Data-Base
 
@@ -27,7 +27,6 @@
 ## Table of Contents
 
 * [About the Database](#About-The-Database)
-  * [Database Schema](#Database-Schema)
   * [Software](#Software)
 * [Installation Guide](#Installation-Guide)
 * [License](#License)
@@ -35,16 +34,10 @@
 
 <!-- ABOUT THE Database -->
 ## About The Database
-
-<!-- Software -->
-### Database-Schema
 <br />
-  <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/750506956539822120/769976987912765480/Database_Schema.PNG" alt="Logo" width="800" height="400">
-  </p>
-<br />
-
-Above is a physical representation of the database that is used for the Tempoture project. The SQL to make this database can be found in this repository as well.
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/750506956539822120/769976987912765480/Database_Schema.PNG" alt="Logo" width="800" height="400">
+</p>
   <!-- fill this in -->
   
   
@@ -64,4 +57,7 @@ Above is a physical representation of the database that is used for the Tempotur
 ## Useful Resources
   <!-- fill this in -->
   
-
+  
+<!-- links -->
+[license-shield]: https://cdn.discordapp.com/attachments/750506956539822120/771468904899543090/gpl_license.PNG
+[license-url]: https://github.com/Tempoture/Tempoture-Data-Base/blob/main/LICENSE
