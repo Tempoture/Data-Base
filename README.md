@@ -27,24 +27,24 @@
 ## Table of Contents
 
 * [About the Database](#About-The-Database)
-  * [Database Schema](#Database-Schema)
   * [Software](#Software)
 * [Installation Guide](#Installation-Guide)
+  * [Flask](#Flask)
+  * [Psycopg2](#Psycopg2)
+  * [PostgreSQL](#PostgreSQL)
 * [License](#License)
 * [Useful Resources](#Useful-Resources)
 
 <!-- ABOUT THE Database -->
 ## About The Database
 
-<!-- Database Schema -->
-### Database Schema
 <br />
   <p align="center">
     <img src="https://cdn.discordapp.com/attachments/750506956539822120/769976987912765480/Database_Schema.PNG" alt="Logo" width="800" height="400">
   </p>
 <br />
 
-Above is a physical representation of the database that is used for the Tempoture project. The SQL to make this database can be found in this repository as well.
+Above is a physical representation of the database that is used for the Tempoture project. The SQL to make this database can be found [here](https://github.com/Tempoture/Tempoture-Data-Base/blob/main/SQL-Queries/TempoDB_V1.sql). This database is used to store user data, Spotify music data, and local weather data. 
   <!-- fill this in -->
   
   
@@ -57,11 +57,24 @@ Above is a physical representation of the database that is used for the Tempotur
   * [PGAdmin](https://www.pgadmin.org/) - A software used for database maintenance and running queries. 
   * [Psycopg2](https://pypi.org/project/psycopg2/) - A software used with python to establish connections with databases.  
   * [PostgreSQL](https://www.postgresql.org/) - An open source object-relational database system that uses and extends the SQL language.
-
-<!-- Installation -->
-## Installation Guide
-  <!-- fill this in -->
+  * [Python3](https://www.python.org/download/releases/3.0/) - The programming language of choice for the project. 
   
+<!-- Installation -->
+## Installation Guide (using Ubuntu)
+  ### Flask (needs Python 3 installed)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt install python3-pip` - Install package management system.
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$pip install Flask` - Install for Flask.
+    
+  ### Psycopg2 (needs Python 3 installed)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt install python3-pip` - Install package management system.
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$pip install psycopg2` - Install for psycopg2.
+    
+  ### PostgreSQL
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt-get install postgresql postgresql-contrib`<br>
+
 <!-- License -->
 ## License
   Distributed under the MIT License. See `LICENSE` for more information.
