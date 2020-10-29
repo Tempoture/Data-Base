@@ -51,6 +51,12 @@ Above is a physical representation of the database that is used for the Tempotur
 <!-- Software -->
 ### Software
   <!-- fill this in -->
+  
+  <!--turn into link-->
+  * [Vertabelo](https://vertabelo.com/) - An application used for designing database schema.
+  * [PGAdmin](https://www.pgadmin.org/) - A software used for database maintenance and running queries. 
+  * [Psycopg2](https://pypi.org/project/psycopg2/) - A software used with python to establish connections with databases.  
+  * [PostgreSQL](https://www.postgresql.org/) - An open source object-relational database system that uses and extends the SQL language.
 
 <!-- Installation -->
 ## Installation Guide
