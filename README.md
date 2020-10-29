@@ -1,3 +1,5 @@
+[![MIT License][license-shield]][license-url]
+
 # Data-Base
 
 <br />
@@ -49,7 +51,7 @@
   
 <!-- License -->
 ## License
-  <!-- fill this in -->
+  Distributed under the MIT License. See `LICENSE` for more information.
   
 <!-- Useful Resources -->
 ## Useful Resources
