@@ -61,12 +61,13 @@ Above is a physical representation of the database that is used for the Tempotur
   
 <!-- Installation -->
 ## Installation Guide (using Ubuntu)
-  ### Flask (needs Python 3 installed)
+Before installing the following softwares, have the latest version of Python installed. 
+  ### Flask
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt install python3-pip` - Install package management system.
    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$pip install Flask` - Install for Flask.
     
-  ### Psycopg2 (needs Python 3 installed)
+  ### Psycopg2
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt install python3-pip` - Install package management system.
    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$pip install psycopg2` - Install for psycopg2.
