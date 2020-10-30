@@ -2,7 +2,7 @@
                    VALUES (1, 'tempoture@gmail.com', 'weather123', 'spot_pass', '2020-10-16' , '2020-10-16 04:24:34', '07035' );"""
 
     cursor.execute(select_query)
-    select_query = """select * from "User" WHERE user_id > 4"""
+    select_query = """select * from "Users" WHERE user_id > 4"""
     cursor.execute(select_query)
     rows = cursor.fetchall()
 
