@@ -78,7 +78,7 @@ Before installing the following softwares, have the latest version of Python ins
 
 <!-- License -->
 ## License
-  Distributed under the MIT License. See `LICENSE` for more information.
+  Distributed under the GPL License. See `LICENSE` for more information.
   
 <!-- Useful Resources -->
 ## Useful Resources
