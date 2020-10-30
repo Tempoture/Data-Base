@@ -1,7 +1,5 @@
 <!--[![GPL License][license-shield]][license-url] -->
 
-# Data-Base
-
 <br />
 <p align="center">
   <a href="https://github.com/Tempoture/Tempoture-Data-Base">
@@ -82,7 +80,12 @@ Before installing the following softwares, have the latest version of Python ins
   
 <!-- Useful Resources -->
 ## Useful Resources
-  <!-- fill this in -->
+* [MySQL in 25 Minutes](https://www.youtube.com/watch?v=8kDs8QkFI2Y&list=PLB-7_zmcEzQyjWl5g8KBnd3dKRvmRlSYA&index=11)
+* [How to Design a Database](https://www.youtube.com/watch?v=cepspxPAUTA&list=PLB-7_zmcEzQyjWl5g8KBnd3dKRvmRlSYA&index=1)
+* [Logical Database Design](https://www.youtube.com/watch?v=ZBgXb66Ckz0&list=PLB-7_zmcEzQyjWl5g8KBnd3dKRvmRlSYA&index=15)
+* [Database Design Course](https://www.youtube.com/watch?v=ztHopE5Wnpc)
+* [Intro to PostgreSQL with PgAdmin](https://www.youtube.com/watch?v=Dd2ej-QKrWY)
+
   
   
 <!-- links -->
