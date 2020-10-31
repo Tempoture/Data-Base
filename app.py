@@ -23,33 +23,37 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DB_URI']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-@app.route('/login/')
+@app.route('/', methods=['GET','POST'])
 def login():
+    error = ''
     engine = create_engine(os.environ['DB_URI'])
     connection = engine.connect()
 
-    email = "tempoture@gmail.com"
-    password = "weather123" 
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
 
-    select_query = '''SELECT * FROM "Users" WHERE email='%s' AND password='%s';''' % ( email, password )
-    User_data = connection.execute( select_query ).fetchone()
+        select_query = '''SELECT * FROM "Users" WHERE email='%s' AND password='%s';''' % ( email, password )
+        User_data = connection.execute( select_query ).fetchone()
 
-    if not User_data:
-        return 'Wrong Login Credentials', 400
-    else:
-        spotify_id = User_data[3]
-        date_created = User_data[4]
-        date_updated = User_data[5]
-        city = User_data[6]
+        if not User_data and email != None:
+            error = 'Wrong email or password' 
+        else:
+            spotify_id = User_data[3]
+            date_created = User_data[4]
+            date_updated = User_data[5]
+            city = User_data[6]
 
-    user = User(email=email, 
-                password=password,
-                spotify_id=spotify_id,
-                date_created=date_created,
-                date_updated=date_updated,
-                city=city)
+            user = User(email=email, 
+                        password=password,
+                        spotify_id=spotify_id,
+                        date_created=date_created,
+                        date_updated=date_updated,
+                        city=city)
 
-    return 'Welcome Back %s' % (user.email)
+            return 'Welcome Back %s' % (user.email)
+
+    return render_template('login.html', error=error)
 
 @app.route('/Users')
 def contacts():
