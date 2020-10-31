@@ -1,18 +1,55 @@
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
+from datetime import datetime
+from db import db
 import psycopg2
 import urllib.parse as urlparse
 import os
 
-url = urlparse.urlparse(os.environ['DATABASE_URL'])
-db = "dbname=%s user=%s password=%s host=%s " % (url.path[1:], url.username, url.password, url.hostname)
+db = SQLAlchemy()
 
-connection = psycopg2.connect(db)
-cur = connection.cursor()
+class User(db.Model):
+    user_id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.Text, unique=True, nullable=False)
+    password = db.Column(db.Text, nullable=False)
+    spotify_id = db.Column(db.Text, unique=True, nullable=False)
+    date_created = db.Column(db.DateTime, nullable=False)
+    date_updated = db.Column(db.TIMESTAMP, nullable=False)
+    city = db.Column(db.Text, nullable=False)
+
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DB_URI']
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db.init_app(app)
 
-@app.route('/')
-def hello():
-    return 'Hello World!'
+@app.route('/login/')
+def login():
+    engine = create_engine(os.environ['DB_URI'])
+    connection = engine.connect()
+
+    email = "tempoture@gmail.com"
+    password = "weather123" 
+
+    select_query = '''SELECT * FROM "Users" WHERE email='%s' AND password='%s';''' % ( email, password )
+    User_data = connection.execute( select_query ).fetchone()
+
+    if not User_data:
+        return 'Wrong Login Credentials', 400
+    else:
+        spotify_id = User_data[3]
+        date_created = User_data[4]
+        date_updated = User_data[5]
+        city = User_data[6]
+
+    user = User(email=email, 
+                password=password,
+                spotify_id=spotify_id,
+                date_created=date_created,
+                date_updated=date_updated,
+                city=city)
+
+    return 'Welcome Back %s' % (user.email)
 
 @app.route('/Users')
 def contacts():
@@ -27,4 +64,4 @@ def contacts():
         return render_template('template.html',  results=my_list)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(threaded=true)
