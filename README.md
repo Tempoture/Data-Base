@@ -1,4 +1,4 @@
-# Data-Base
+<!--[![GPL License][license-shield]][license-url] -->
 
 <br />
 <p align="center">
@@ -27,32 +27,67 @@
 * [About the Database](#About-The-Database)
   * [Software](#Software)
 * [Installation Guide](#Installation-Guide)
+  * [Flask](#Flask)
+  * [Psycopg2](#Psycopg2)
+  * [PostgreSQL](#PostgreSQL)
 * [License](#License)
 * [Useful Resources](#Useful-Resources)
 
 <!-- ABOUT THE Database -->
 ## About The Database
+
 <br />
-<p align="center">
-  <img src="https://cdn.discordapp.com/attachments/750506956539822120/769976987912765480/Database_Schema.PNG" alt="Logo" width="800" height="400">
-</p>
+  <p align="center">
+    <img src="https://cdn.discordapp.com/attachments/750506956539822120/769976987912765480/Database_Schema.PNG" alt="Logo" width="800" height="400">
+  </p>
+<br />
+
+Above is a physical representation of the database that is used for the Tempoture project. The SQL to make this database can be found [here](https://github.com/Tempoture/Tempoture-Data-Base/blob/main/SQL-Queries/TempoDB_V1.sql). This database is used to store user data, Spotify music data, and local weather data. 
   <!-- fill this in -->
   
   
 <!-- Software -->
 ### Software
   <!-- fill this in -->
-
+  
+  <!--turn into link-->
+  * [Vertabelo](https://vertabelo.com/) - An application used for designing database schema.
+  * [PGAdmin](https://www.pgadmin.org/) - A software used for database maintenance and running queries. 
+  * [Psycopg2](https://pypi.org/project/psycopg2/) - A software used with python to establish connections with databases.  
+  * [PostgreSQL](https://www.postgresql.org/) - An open source object-relational database system that uses and extends the SQL language.
+  * [Python3](https://www.python.org/download/releases/3.0/) - The programming language of choice for the project. 
+  
 <!-- Installation -->
 ## Installation Guide
-  <!-- fill this in -->
-  
+Before installing the following softwares, have the latest version of Python installed. Also note that these install commands are specific for the Ubuntu bash terminal. 
+  ### Flask
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt install python3-pip` - Install package management system.
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$pip install Flask` - Install for Flask.
+    
+  ### Psycopg2
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt install python3-pip` - Install package management system.
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$pip install psycopg2` - Install for psycopg2.
+    
+  ### PostgreSQL
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt-get install postgresql postgresql-contrib`<br>
+
 <!-- License -->
 ## License
-  <!-- fill this in -->
+  Distributed under the GPL License. See `LICENSE` for more information.
   
 <!-- Useful Resources -->
 ## Useful Resources
-  <!-- fill this in -->
-  
+* [MySQL in 25 Minutes](https://www.youtube.com/watch?v=8kDs8QkFI2Y&list=PLB-7_zmcEzQyjWl5g8KBnd3dKRvmRlSYA&index=11)
+* [How to Design a Database](https://www.youtube.com/watch?v=cepspxPAUTA&list=PLB-7_zmcEzQyjWl5g8KBnd3dKRvmRlSYA&index=1)
+* [Logical Database Design](https://www.youtube.com/watch?v=ZBgXb66Ckz0&list=PLB-7_zmcEzQyjWl5g8KBnd3dKRvmRlSYA&index=15)
+* [Database Design Course](https://www.youtube.com/watch?v=ztHopE5Wnpc)
+* [Intro to PostgreSQL with PgAdmin](https://www.youtube.com/watch?v=Dd2ej-QKrWY)
 
+  
+  
+<!-- links -->
+[license-shield]: https://cdn.discordapp.com/attachments/750506956539822120/771468904899543090/gpl_license.PNG
+[license-url]: https://github.com/Tempoture/Tempoture-Data-Base/blob/main/LICENSE
