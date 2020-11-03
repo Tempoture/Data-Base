@@ -1,6 +1,7 @@
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 import binascii
+import os
 
 CRYPTO_KEY = pad((os.environ['CRYPTO_KEY']).encode('utf-8'), AES.block_size)
 CRYPTO_IV = pad((os.environ['CRYPTO_IV']).encode('utf-8'), AES.block_size)
