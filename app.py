@@ -33,7 +33,7 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        cipher_text = binascii.unhexlify(_encrypt(password, CRYPTO_KEY, CRYPTO_IV)
+        cipher_text = binascii.unhexlify(_encrypt(password, CRYPTO_KEY, CRYPTO_IV))
 
         select_query = '''SELECT * FROM "Users" WHERE email='%s' AND password='%s';''' % ( email, cipher_text )
         User_data = connection.execute( select_query ).fetchone()
