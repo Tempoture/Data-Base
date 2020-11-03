@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from datetime import datetime
 from db import db
+from Cipher import _encrypt, _decrypt, CRYPTO_KEY, CRYPTO_IV  
 import psycopg2
 import urllib.parse as urlparse
 import os
@@ -32,8 +33,9 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
+        cipher_text = _encrypt(password, CRYPTO_KEY, CRYPTO_IV)
 
-        select_query = '''SELECT * FROM "Users" WHERE email='%s' AND password='%s';''' % ( email, password )
+        select_query = '''SELECT * FROM "Users" WHERE email='%s' AND password='%s';''' % ( email, cipher_text )
         User_data = connection.execute( select_query ).fetchone()
 
         if not User_data and email != None:
@@ -57,15 +59,17 @@ def login():
 
 @app.route('/Users')
 def contacts():
-        select_query = 'SELECT * FROM public."Users"'
-        cur.execute(select_query )
-        rows = cur.fetchall()
+    engine = create_engine('postgresql+psycopg2://sqbcpddyydwlwd:1dbaacd8bbab3cba88b6a1230ed7dc20bd087acf277a33a845d7852b7f2325f9@ec2-52-22-216-69.compute-1.amazonaws.com:5432/d6v44i8pm8e1h3')
+    connection = engine.connect()
 
-        my_list = []
-        for row in rows:
-            my_list.append(row[1])
+    select_query = 'SELECT * FROM "User"'
+    rows = connection.execute( select_query ).fetchall()
 
-        return render_template('template.html',  results=my_list)
+    my_list = []
+    for row in rows:
+        my_list.append(row[1])
+
+    return render_template('template.html', results = my_list)
 
 if __name__ == '__main__':
     app.run(threaded=true)
