@@ -11,7 +11,7 @@ def _encrypt(plain_text, key, iv):
     padded_bytes = pad(data_bytes, AES.block_size)
     AES_obj = AES.new(key, AES.MODE_CBC, iv)
     cipher_text = AES_obj.encrypt(padded_bytes)
-    cipher_text = binascii.hexlify(cipher_text)
+    cipher_text = cipher_text.encode('hex')
 
     return cipher_text
 
