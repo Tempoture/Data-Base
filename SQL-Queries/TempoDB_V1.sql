@@ -2,7 +2,7 @@
 CREATE TABLE "User" (
     user_id bigint  NOT NULL,
     email varchar(100)  NOT NULL,
-    password varchar(50)  NOT NULL,
+    password varchar(256)  NOT NULL,
     spotify_id varchar(100)  NOT NULL,
     date_created date  NOT NULL,
     date_updated timestamp  NOT NULL,
