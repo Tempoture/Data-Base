@@ -6,6 +6,7 @@ from db import db
 from Cipher import _encrypt, _decrypt, CRYPTO_KEY, CRYPTO_IV  
 import psycopg2
 import urllib.parse as urlparse
+import binascii
 import os
 
 db = SQLAlchemy()
