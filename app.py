@@ -34,7 +34,7 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        cipher_text = binascii.unhexlify(_encrypt(password, CRYPTO_KEY, CRYPTO_IV))
+        cipher_text = _encrypt(password, CRYPTO_KEY, CRYPTO_IV)
 
         select_query = '''SELECT * FROM "Users" WHERE email='%s' AND password='%s';''' % ( email, cipher_text )
         User_data = connection.execute( select_query ).fetchone()
@@ -60,7 +60,7 @@ def login():
 
 @app.route('/Users')
 def contacts():
-    engine = create_engine('postgresql+psycopg2://sqbcpddyydwlwd:1dbaacd8bbab3cba88b6a1230ed7dc20bd087acf277a33a845d7852b7f2325f9@ec2-52-22-216-69.compute-1.amazonaws.com:5432/d6v44i8pm8e1h3')
+    engine = create_engine(os.environ['DB_URI'])
     connection = engine.connect()
 
     select_query = 'SELECT * FROM "User"'
