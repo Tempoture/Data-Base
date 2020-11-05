@@ -36,7 +36,7 @@ def login():
         password = request.form['password']
         cipher_text = _encrypt(password, CRYPTO_KEY, CRYPTO_IV)
 
-        select_query = '''SELECT * FROM "User" WHERE email='%s' AND password='%s';''' % ( email, cipher_text) 
+        select_query = '''SELECT * FROM "User" WHERE email='%s' AND password=%s;''' % ( email, cipher_text) 
         User_data = connection.execute( select_query ).fetchone()
 
         if not User_data and email != None:
