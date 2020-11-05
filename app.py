@@ -4,6 +4,7 @@ from sqlalchemy import create_engine
 from datetime import datetime
 from db import db
 from Cipher import _encrypt, _decrypt, CRYPTO_KEY, CRYPTO_IV  
+from sqlalchemy.sql import text
 import psycopg2
 import urllib.parse as urlparse
 import binascii
@@ -36,8 +37,9 @@ def login():
         password = request.form['password']
         cipher_text = _encrypt(password, CRYPTO_KEY, CRYPTO_IV)
 
-        select_query = '''SELECT * FROM "User" WHERE email='%s' AND password=%s;''' % ( email, cipher_text) 
-        User_data = connection.execute( select_query ).fetchone()
+        select_query = """SELECT * FROM "User" WHERE email=:test1 AND password=:test2;""" 
+        User_data = connection.execute(text(select_query), test1 = email, test2 = password ).fetchone()
+
 
         if not User_data and email != None:
             error = 'Wrong email or password' 
