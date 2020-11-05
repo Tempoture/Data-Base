@@ -38,7 +38,7 @@ def login():
         cipher_text = _encrypt(password, CRYPTO_KEY, CRYPTO_IV)
 
         select_query = """SELECT * FROM "User" WHERE email=:test1 AND password=:test2;""" 
-        User_data = connection.execute(text(select_query), test1 = email, test2 = cipher_text ).fetchone()
+        User_data = connection.execute(text(select_query), test1 = email, test2 = cipher_text.decode('utf-8') ).fetchone()
 
 
         if not User_data and email != None:
