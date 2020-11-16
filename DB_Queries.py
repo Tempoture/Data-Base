@@ -102,6 +102,7 @@ def Insert_Countries_Query(country_name):
     engine = create_engine(os.environ['DB_URI'])
 
     with engine.connect() as connection:
+        connection.autocommit = True
 
         insert_query =  """INSERT INTO "countries"(country_id, country_name) VALUES(DEFAULT, :input);""" 
         connection.execute(text(insert_query), input = country_name )
