@@ -56,6 +56,7 @@ Above is a physical representation of the database that is used for the Tempotur
   * [Psycopg2](https://pypi.org/project/psycopg2/) - A software used with python to establish connections with databases.  
   * [PostgreSQL](https://www.postgresql.org/) - An open source object-relational database system that uses and extends the SQL language.
   * [Python3](https://www.python.org/download/releases/3.0/) - The programming language of choice for the project. 
+  * [SQLAlchemy](https://www.sqlalchemy.org/) - The software used in conjunction with Psycopg2 to query the database.
   
 <!-- Installation -->
 ## Installation Guide
