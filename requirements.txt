@@ -13,5 +13,3 @@ db.py==0.5.3
 Flask-Session==0.3.2
 pycryptodome==3.9.7
 pycrypto==2.6.1
-random==3.9.0
-string==3.9.0
