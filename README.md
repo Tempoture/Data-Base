@@ -73,7 +73,11 @@ Before installing the following softwares, have the latest version of Python ins
   ### PostgreSQL
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt-get install postgresql postgresql-contrib`<br>
-
+  
+  ### SQLAlchemy
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$sudo apt update` - Ensures Ubuntu is up to date.
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$pip install SQLAlchemy` - Install for SQL alchemy.
+  
 <!-- License -->
 ## License
   Distributed under the GPL License. See `LICENSE` for more information.
@@ -85,7 +89,7 @@ Before installing the following softwares, have the latest version of Python ins
 * [Logical Database Design](https://www.youtube.com/watch?v=ZBgXb66Ckz0&list=PLB-7_zmcEzQyjWl5g8KBnd3dKRvmRlSYA&index=15)
 * [Database Design Course](https://www.youtube.com/watch?v=ztHopE5Wnpc)
 * [Intro to PostgreSQL with PgAdmin](https://www.youtube.com/watch?v=Dd2ej-QKrWY)
-
+* [AES Explained (Advanced Encryption Standard)](https://www.youtube.com/watch?v=O4xNJsjtN6E)
   
   
 <!-- links -->
