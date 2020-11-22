@@ -30,6 +30,7 @@
   * [Flask](#Flask)
   * [Psycopg2](#Psycopg2)
   * [PostgreSQL](#PostgreSQL)
+  * [SQLAlchemy](#SQLAlchemy)
 * [License](#License)
 * [Useful Resources](#Useful-Resources)
 
